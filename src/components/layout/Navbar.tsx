@@ -3,7 +3,7 @@ const Navbar = () => {
 	const [colorTheme, setTheme] = useTheme();
 
 	return (
-		<nav className='font-nunito py-6 bg-white dark:bg-dark-blue px-20 flex justify-between items-center drop-shadow-sm'>
+		<nav className='font-nunito py-7 md:py-6 bg-white dark:bg-dark-blue px-4  md:px-20 flex justify-between items-center drop-shadow-sm text-very-dark-blue-text dark:text-white'>
 			<a href='/' className='font-extrabold text-2xl'>
 				GlobeTrekker 🌍
 			</a>
@@ -31,7 +31,7 @@ const Navbar = () => {
 						strokeWidth='1.25'
 					/>
 				</svg>
-				Dark Mode
+				{colorTheme === "light" ? "Dark Mode" : "Light Mode"}
 			</button>
 		</nav>
 	);
